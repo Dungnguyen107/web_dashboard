@@ -59,25 +59,25 @@
 
       <section class="content-grid">
         <div class="vehicle-status">
-          <div class="status-card">
+          <div class="status-card" onclick="openPopup('temperature')">
             <span>Nhiệt độ</span>
             <h2>86°C</h2>
             <p>Normal</p>
           </div>
 
-          <div class="status-card">
+          <div class="status-card" onclick="openPopup('speed')">
             <span>Tốc độ</span>
             <h2>42 km/h</h2>
             <p>Current speed</p>
           </div>
 
-          <div class="status-card">
+          <div class="status-card" onclick="openPopup('fuel')">
             <span>Mức xăng/pin</span>
             <h2>68%</h2>
             <p>Fuel / Battery</p>
           </div>
 
-          <div class="status-card">
+          <div class="status-card" onclick="openPopup('oil')">
             <span>Tình trạng nhớt</span>
             <h2>Good</h2>
             <p>Oil condition</p>
@@ -142,6 +142,21 @@
 
       </section>
     </main>
+    </div>
+    <div class="popup-overlay" id="popup">
+      <div class="popup-window">
+          <div class="popup-header">
+              <h2 id="popup-title">
+                  Title
+              </h2>
+              <button onclick="closePopup()">
+                  ✕
+              </button>
+          </div>
+          <div class="popup-body" id="popup-body">
+          </div>
+      </div>
   </div>
+  <script src="scripts.js"></script>
 </body>
 </html>
