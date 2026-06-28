@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoMate Dashboard - Overview</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="logo">AutoMate</div>
+
+      <nav class="menu">
+        <a class="active" href="index.html">Overview</a>
+        <a href="vehicle.html">Vehicle Control</a>
+        <a href="ota.html">OTA Update</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+    <header class="topbar">
+        <div>
+        <h1>Fleet Overview</h1>
+        <p>Quản lý tổng quan hệ thống xe AutoMate</p>
+        </div>
+
+        <div class="top-actions">
+        <input type="text" placeholder="Search vehicle ID / license plate..." />
+        <div class="avatar">AV</div>
+        </div>
+    </header>
+
+    <section class="overview-layout">
+
+        <!-- LEFT: selected vehicle metrics -->
+        <div class="selected-metrics">
+        <div class="metric-card">
+            <div class="metric-top">
+            <span>Alert Level</span>
+            <span class="info-icon">i</span>
+            </div>
+            <h2>Level 1</h2>
+            <p>Normal condition</p>
+        </div>
+
+        <div class="metric-card">
+            <div class="metric-top">
+            <span>Engine Temp</span>
+            <span class="info-icon">i</span>
+            </div>
+            <h2>86°C</h2>
+            <p>Within safe range</p>
+        </div>
+
+        <div class="metric-card">
+            <div class="metric-top">
+            <span>Battery</span>
+            <span class="info-icon">i</span>
+            </div>
+            <h2>12.6V</h2>
+            <p>Stable voltage</p>
+        </div>
+
+        <div class="metric-card">
+            <div class="metric-top">
+            <span>Last Update</span>
+            <span class="info-icon">i</span>
+            </div>
+            <h2>2 min</h2>
+            <p>Vehicle online</p>
+        </div>
+        </div>
+
+        <!-- CENTER: fleet stats + map -->
+        <div class="map-area">
+        <section class="stats compact-stats">
+            <div class="card">
+            <span>Total Vehicles</span>
+            <h2>24</h2>
+            </div>
+
+            <div class="card">
+            <span>Active</span>
+            <h2>21</h2>
+            </div>
+
+            <div class="card warning">
+            <span>Warning</span>
+            <h2>3</h2>
+            </div>
+
+            <div class="card danger">
+            <span>Danger</span>
+            <h2>1</h2>
+            </div>
+        </section>
+
+        <section class="map-panel">
+            <div class="panel-header">
+            <h3>Vehicle Map</h3>
+            <span>Live location</span>
+            </div>
+
+            <div class="map-placeholder">
+            MAP / Vị trí các xe trong hệ thống
+            </div>
+        </section>
+        </div>
+
+        <!-- RIGHT: collapsible vehicle list -->
+        <details class="vehicle-list-collapsed">
+        <summary>Vehicle List</summary>
+
+        <div class="vehicle-item active-car">
+            <strong>VEH-001</strong>
+            <span>51H-123.45</span>
+            <p>Normal · Toyota Fortuner</p>
+        </div>
+
+        <div class="vehicle-item">
+            <strong>VEH-002</strong>
+            <span>51K-888.12</span>
+            <p>Warning · Mitsubishi Xpander</p>
+        </div>
+
+        <div class="vehicle-item">
+            <strong>VEH-003</strong>
+            <span>30F-456.78</span>
+            <p>Offline · VinFast VF9</p>
+        </div>
+        </details>
+
+    </section>
+
+    <section class="selected-vehicle simple-selected">
+        <div class="panel-header">
+        <h3>Selected Vehicle</h3>
+        <span>Auto selected</span>
+        </div>
+
+        <div class="simple-info">
+        <div>
+            <span>License Plate</span>
+            <strong>51H-123.45</strong>
+        </div>
+
+        <div>
+            <span>Vehicle Type</span>
+            <strong>Toyota Fortuner</strong>
+        </div>
+        </div>
+    </section>
+    </main>
+      <header class="topbar">
+        <div>
+          <h1>Fleet Overview</h1>
+          <p>Quản lý tổng quan hệ thống xe AutoMate</p>
+        </div>
+
+        <div class="top-actions">
+          <input type="text" placeholder="Search vehicle..." />
+          <div class="avatar">AV</div>
+        </div>
+      </header>
+
+      <section class="stats">
+        <div class="card">
+          <span>Total Vehicles</span>
+          <h2>24</h2>
+          <p>Tổng số xe trong hệ thống</p>
+        </div>
+
+        <div class="card">
+          <span>Online</span>
+          <h2>21</h2>
+          <p>Xe đang kết nối</p>
+        </div>
+
+        <div class="card warning">
+          <span>Warning</span>
+          <h2>3</h2>
+          <p>Xe có cảnh báo cần chú ý</p>
+        </div>
+
+        <div class="card danger">
+          <span>Danger</span>
+          <h2>1</h2>
+          <p>Xe ở mức nguy hiểm</p>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <div class="map-panel">
+          <div class="panel-header">
+            <h3>Vehicle Map</h3>
+            <span>Live location</span>
+          </div>
+
+          <div class="map-placeholder">
+            MAP / Vị trí các xe trong hệ thống
+          </div>
+        </div>
+
+        <div class="vehicle-list">
+          <div class="panel-header">
+            <h3>Vehicle List</h3>
+            <span>Click để chọn xe</span>
+          </div>
+
+          <div class="vehicle-item active-car">
+            <strong>VEH-001</strong>
+            <span>51H-123.45</span>
+            <p>Normal · Last update 2 min ago</p>
+          </div>
+
+          <div class="vehicle-item">
+            <strong>VEH-002</strong>
+            <span>51K-888.12</span>
+            <p>Warning · Engine temperature</p>
+          </div>
+
+          <div class="vehicle-item">
+            <strong>VEH-003</strong>
+            <span>30F-456.78</span>
+            <p>Offline · Last update 1 hour ago</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="selected-vehicle">
+        <div class="panel-header">
+          <h3>Selected Vehicle</h3>
+          <span>Thông tin xe đang chọn</span>
+        </div>
+
+        <div class="vehicle-info-grid">
+          <div>
+            <span>Vehicle ID</span>
+            <strong>VEH-001</strong>
+          </div>
+
+          <div>
+            <span>License Plate</span>
+            <strong>51H-123.45</strong>
+          </div>
+
+          <div>
+            <span>Status</span>
+            <strong class="status-ok">Normal</strong>
+          </div>
+
+          <div>
+            <span>Alert Level</span>
+            <strong>Level 1</strong>
+          </div>
+
+          <div>
+            <span>Speed</span>
+            <strong>42 km/h</strong>
+          </div>
+
+          <div>
+            <span>Last Update</span>
+            <strong>2 min ago</strong>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

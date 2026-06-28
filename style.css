@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f8fb;
+  color: #111827;
+}
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 180px;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  padding: 24px 18px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 40px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #6b7280;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.menu a:hover,
+.menu a.active {
+  background: #eaf2ff;
+  color: #2563eb;
+}
+
+.main {
+  flex: 1;
+  padding: 28px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.topbar h1 {
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+
+.topbar p {
+  color: #6b7280;
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.top-actions input {
+  width: 260px;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #0f766e;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.card span {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.card h2 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.card p {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.warning h2 {
+  color: #f59e0b;
+}
+
+.danger h2 {
+  color: #dc2626;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 22px;
+  margin-bottom: 22px;
+}
+
+.map-panel,
+.vehicle-list,
+.selected-vehicle,
+.empty-page {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.panel-header h3 {
+  font-size: 18px;
+}
+
+.panel-header span {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.map-placeholder {
+  height: 420px;
+  background: #e8f3f1;
+  border: 1px dashed #9ca3af;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #374151;
+}
+
+.vehicle-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.vehicle-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.vehicle-item strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.vehicle-item span {
+  color: #2563eb;
+  font-size: 14px;
+}
+
+.vehicle-item p {
+  color: #6b7280;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.active-car {
+  border-color: #2563eb;
+  background: #f0f6ff;
+}
+
+.vehicle-info-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.vehicle-info-grid div {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.vehicle-info-grid span {
+  display: block;
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.vehicle-info-grid strong {
+  font-size: 15px;
+}
+
+.status-ok {
+  color: #16a34a;
+}
+
+.empty-page {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 22px;
+}
