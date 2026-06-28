@@ -58,6 +58,32 @@
       </section>
 
       <section class="content-grid">
+        <div class="vehicle-status">
+          <div class="status-card">
+            <span>Nhiệt độ</span>
+            <h2>86°C</h2>
+            <p>Normal</p>
+          </div>
+
+          <div class="status-card">
+            <span>Tốc độ</span>
+            <h2>42 km/h</h2>
+            <p>Current speed</p>
+          </div>
+
+          <div class="status-card">
+            <span>Mức xăng/pin</span>
+            <h2>68%</h2>
+            <p>Fuel / Battery</p>
+          </div>
+
+          <div class="status-card">
+            <span>Tình trạng nhớt</span>
+            <h2>Good</h2>
+            <p>Oil condition</p>
+          </div>
+        </div>
+
         <div class="map-panel">
           <div class="panel-header">
             <h3>Vehicle Map</h3>
@@ -69,11 +95,8 @@
           </div>
         </div>
 
-        <div class="vehicle-list">
-          <div class="panel-header">
-            <h3>Vehicle List</h3>
-            <span>Click để chọn xe</span>
-          </div>
+        <details class="vehicle-list">
+          <summary>Vehicle List</summary>
 
           <div class="vehicle-item active-car">
             <strong>VEH-001</strong>
@@ -92,46 +115,31 @@
             <span>30F-456.78</span>
             <p>Offline · Last update 1 hour ago</p>
           </div>
-        </div>
+        </details>
       </section>
 
       <section class="selected-vehicle">
-        <div class="panel-header">
-          <h3>Selected Vehicle</h3>
-          <span>Thông tin xe đang chọn</span>
-        </div>
 
-        <div class="vehicle-info-grid">
-          <div>
-            <span>Vehicle ID</span>
-            <strong>VEH-001</strong>
+          <div class="selected-summary">
+
+              <div class="selected-title">
+                  <span>Selected Vehicle</span>
+              </div>
+
+              <div class="selected-item">
+                  <strong>Toyota Fortuner</strong>
+              </div>
+
+              <div class="selected-item">
+                  <strong>51H-123.45</strong>
+              </div>
+
+              <div class="selected-item">
+                  <strong class="level-normal">🟢 Level 1</strong>
+              </div>
+
           </div>
 
-          <div>
-            <span>License Plate</span>
-            <strong>51H-123.45</strong>
-          </div>
-
-          <div>
-            <span>Status</span>
-            <strong class="status-ok">Normal</strong>
-          </div>
-
-          <div>
-            <span>Alert Level</span>
-            <strong>Level 1</strong>
-          </div>
-
-          <div>
-            <span>Speed</span>
-            <strong>42 km/h</strong>
-          </div>
-
-          <div>
-            <span>Last Update</span>
-            <strong>2 min ago</strong>
-          </div>
-        </div>
       </section>
     </main>
   </div>
