@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AutoMate Dashboard - Overview</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div class="dashboard">
     <aside class="sidebar">
@@ -14,7 +15,7 @@
       <nav class="menu">
         <a class="active" href="index.html">Overview</a>
         <a href="diagnose.html">Diagnose</a>
-        <a href="ota.html">OTA Update</a>
+        <a href="systems.html">Systems</a>
       </nav>
     </aside>
 
@@ -71,9 +72,9 @@
           </div>
 
           <div class="status-card" onclick="openPopup('fuel')">
-            <span>Fuel Level</span>
+            <span>Fuel</span>
             <h2>68%</h2>
-            <p>Fuel Remaining</p>
+            <p>Fuel remaining</p>
           </div>
 
           <div class="status-card" onclick="openPopup('oil')">
@@ -95,22 +96,58 @@
         </div>
       </section>
 
+      <section class="vehicle-info-card">
+        <div class="vehicle-info-header">
+          <div>
+            <h3>Vehicle Information</h3>
+          </div>
+
+          <button class="details-btn" onclick="openPopup('vehicle')">
+            Details
+          </button>
+        </div>
+
+        <div class="vehicle-info-grid">
+          <div class="vehicle-info-item">
+            <span>Brand</span>
+            <strong>Toyota</strong>
+          </div>
+
+          <div class="vehicle-info-item">
+            <span>Model</span>
+            <strong>Corolla Cross</strong>
+          </div>
+
+          <div class="vehicle-info-item">
+            <span>License Plate</span>
+            <strong>51H-123.45</strong>
+          </div>
+
+          <div class="vehicle-info-item">
+            <span>VIN</span>
+            <strong>RL4XW43G869205813</strong>
+          </div>
+
+          <div class="vehicle-info-item">
+            <span>Inspection</span>
+            <strong class="status-valid">Valid</strong>
+          </div>
+        </div>
+      </section>
     </main>
-    </div>
-    <div class="popup-overlay" id="popup">
-      <div class="popup-window">
-          <div class="popup-header">
-              <h2 id="popup-title">
-                  Title
-              </h2>
-              <button onclick="closePopup()">
-                  ✕
-              </button>
-          </div>
-          <div class="popup-body" id="popup-body">
-          </div>
-      </div>
   </div>
+
+  <div class="popup-overlay" id="popup">
+    <div class="popup-window">
+      <div class="popup-header">
+        <h2 id="popup-title">Title</h2>
+        <button onclick="closePopup()">✕</button>
+      </div>
+
+      <div class="popup-body" id="popup-body"></div>
+    </div>
+  </div>
+
   <script src="scripts.js"></script>
 </body>
 </html>
