@@ -22,12 +22,120 @@
       <header class="topbar">
         <div>
           <h1>Systems</h1>
-          <p>System settings, firmware, and device management</p>
+          <p>Device, vehicle, firmware, and account settings</p>
+        </div>
+
+        <div class="top-actions">
+          <div class="avatar">AV</div>
         </div>
       </header>
 
-      <section class="empty-page">
-        Systems Page
+      <section class="system-summary">
+        <div class="card">
+          <span>Current Device</span>
+          <h2>AMT-DEV-001</h2>
+          <p>Activated and online</p>
+        </div>
+
+        <div class="card">
+          <span>Current Vehicle</span>
+          <h2>51H-123.45</h2>
+          <p>Toyota Corolla Cross</p>
+        </div>
+
+        <div class="card alert-level">
+          <span>Firmware</span>
+          <h2>v1.2.0</h2>
+          <p>Latest stable version</p>
+        </div>
+
+        <div class="card health">
+          <span>Account</span>
+          <h2>Premium</h2>
+          <p>Health reports enabled</p>
+        </div>
+      </section>
+
+      <section class="systems-grid">
+        <div class="system-panel">
+          <div class="system-panel-header">
+            <div>
+              <h3>Vehicle Management</h3>
+              <p>Manage the vehicle connected to this AutoMate device</p>
+            </div>
+          </div>
+
+          <div class="current-vehicle-box">
+            <span>Current Vehicle</span>
+            <strong>Toyota Corolla Cross — 51H-123.45</strong>
+            <p>VIN: JTDBR32E72008XK231 · Device ID: AMT-DEV-001</p>
+          </div>
+
+          <div class="system-action-row">
+            <div>
+              <h4>Update Vehicle</h4>
+              <p>Use this when transferring the current device to another car. Vehicle configuration and CAN profile will need to be updated.</p>
+            </div>
+            <button class="system-btn">Update</button>
+          </div>
+
+          <div class="system-action-row">
+            <div>
+              <h4>Add Another Vehicle</h4>
+              <p>Each vehicle requires a dedicated AutoMate device. Purchase and activate another device to monitor an additional car.</p>
+            </div>
+            <button class="system-btn secondary">Buy Device</button>
+          </div>
+        </div>
+
+        <div class="system-panel">
+          <div class="system-panel-header">
+            <div>
+              <h3>System Update</h3>
+              <p>Firmware and configuration status</p>
+            </div>
+          </div>
+
+          <div class="system-info-list">
+            <p><strong>Firmware Version:</strong> v1.2.0</p>
+            <p><strong>CAN Profile:</strong> Toyota Corolla Cross 2021–2024</p>
+            <p><strong>Last Update:</strong> 2026-07-01</p>
+            <p><strong>Status:</strong> Up to date</p>
+          </div>
+
+          <button class="system-btn full">Check for Update</button>
+        </div>
+      </section>
+
+      <section class="user-info-panel">
+        <div class="system-panel-header">
+          <div>
+            <h3>User Information</h3>
+            <p>Account and subscription details</p>
+          </div>
+        </div>
+
+        <div class="user-info-grid">
+          <div>
+            <span>Name</span>
+            <strong>AutoMate User</strong>
+          </div>
+
+          <div>
+            <span>Email</span>
+            <strong>user@automate.vn</strong>
+          </div>
+
+          <div>
+            <span>Phone</span>
+            <strong>+84 900 000 000</strong>
+          </div>
+
+          <div>
+            <span>Subscription</span>
+            <strong>Premium · Active</strong>
+          </div>
+        </div>
       </section>
     </main>
   </div>
