@@ -495,3 +495,140 @@ body {
   color: #9ca3af;
   font-size: clamp(11px, 0.75vw, 14px);
 }
+
+.system-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.9vw;
+  margin-bottom: 1.4vh;
+}
+
+.systems-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1vw;
+  margin-bottom: 1.4vh;
+}
+
+.system-panel,
+.user-info-panel {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 1vw;
+  padding: 1.3vh 1vw;
+}
+
+.system-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2vh;
+}
+
+.system-panel-header h3 {
+  font-size: clamp(16px, 1.15vw, 22px);
+}
+
+.system-panel-header p {
+  color: #6b7280;
+  font-size: clamp(11px, 0.8vw, 14px);
+}
+
+.current-vehicle-box {
+  background: #f8fafc;
+  border-radius: 0.8vw;
+  padding: 1vh 0.9vw;
+  margin-bottom: 1vh;
+}
+
+.current-vehicle-box span {
+  display: block;
+  color: #6b7280;
+  font-size: clamp(11px, 0.75vw, 14px);
+}
+
+.current-vehicle-box strong {
+  display: block;
+  margin: 0.4vh 0;
+  font-size: clamp(15px, 1vw, 19px);
+}
+
+.current-vehicle-box p {
+  color: #9ca3af;
+  font-size: clamp(11px, 0.75vw, 14px);
+}
+
+.system-action-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1vw;
+  align-items: center;
+  border-top: 1px solid #e5e7eb;
+  padding: 1.1vh 0;
+}
+
+.system-action-row h4 {
+  font-size: clamp(14px, 1vw, 18px);
+  margin-bottom: 0.4vh;
+}
+
+.system-action-row p,
+.system-info-list p {
+  color: #6b7280;
+  font-size: clamp(11px, 0.8vw, 14px);
+}
+
+.system-info-list {
+  background: #f8fafc;
+  border-radius: 0.8vw;
+  padding: 1vh 0.9vw;
+  margin-bottom: 1vh;
+  line-height: 1.8;
+}
+
+.system-btn {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 0.8vh 1vw;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: clamp(11px, 0.75vw, 14px);
+  white-space: nowrap;
+}
+
+.system-btn.secondary {
+  background: #0f766e;
+}
+
+.system-btn.full {
+  width: 100%;
+}
+
+.system-btn:hover {
+  opacity: 0.9;
+}
+
+.user-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8vw;
+}
+
+.user-info-grid div {
+  background: #f8fafc;
+  border-radius: 0.8vw;
+  padding: 1vh 0.9vw;
+}
+
+.user-info-grid span {
+  display: block;
+  color: #6b7280;
+  font-size: clamp(11px, 0.75vw, 14px);
+}
+
+.user-info-grid strong {
+  display: block;
+  margin-top: 0.4vh;
+  font-size: clamp(13px, 0.9vw, 16px);
+}
