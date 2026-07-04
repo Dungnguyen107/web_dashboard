@@ -101,6 +101,22 @@ body {
   margin-bottom: 1.4vh;
 }
 
+.health h2 {
+  color: #059669;
+}
+
+.alert-level h2 {
+  color: #2563eb;
+}
+
+.drive-advice h2 {
+  color: #059669;
+}
+
+.maintenance h2 {
+  color: #d97706;
+}
+
 .card {
   background: white;
   border: 1px solid #e5e7eb;
@@ -114,7 +130,7 @@ body {
 }
 
 .card h2 {
-  font-size: clamp(24px, 1.8vw, 36px);
+  font-size: clamp(20px, 1.6vw, 30px);
   margin: 0.5vh 0;
 }
 
@@ -157,17 +173,17 @@ body {
 }
 
 .status-card span {
-  font-size: clamp(11px, 0.8vw, 15px);
+  font-size: clamp(15px, 1.2vw, 18px);
 }
 
 .status-card h2 {
-  font-size: clamp(18px, 1.4vw, 28px);
+  font-size: clamp(22px, 1.4vw, 30px);
   margin-top: 0.7vh;
 }
 
 .status-card p {
   color: #6b7280;
-  font-size: clamp(12px, 1vw, 15  px);
+  font-size: clamp(8px, 1vw, 15px);
 }
 
 .map-panel {
@@ -192,7 +208,10 @@ body {
 
 .map-placeholder {
   height: calc(100% - 4vh);
-  background: #e8f3f1;
+  background-image: url("assets/images/maps.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border: 1px dashed #9ca3af;
   border-radius: 1vw;
   display: flex;

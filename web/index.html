@@ -32,28 +32,28 @@
       </header>
 
       <section class="stats">
-        <div class="card">
-          <span>Total Vehicles</span>
-          <h2>24</h2>
-          <p>Total vehicles in the system</p>
+        <div class="card health">
+          <span>Vehicle Health</span>
+          <h2>good</h2>
+          <p>Overall system condition</p>
         </div>
 
-        <div class="card">
-          <span>Online</span>
-          <h2>21</h2>
-          <p>Connected vehicles</p>
+        <div class="card alert-level">
+          <span>Alert Level</span>
+          <h2>Level 1</h2>
+          <p>Normal — no active critical faults</p>
         </div>
 
-        <div class="card warning">
-          <span>Warning</span>
-          <h2>3</h2>
-          <p>Vehicles requiring attention</p>
+        <div class="card drive-advice">
+          <span>Drive Advice</span>
+          <h2>Safe to Drive</h2>
+          <p>Continuous monitoring vehicle status</p>
         </div>
 
-        <div class="card danger">
-          <span>Danger</span>
-          <h2>1</h2>
-          <p>Vehicles in critical condition</p>
+        <div class="card maintenance">
+          <span>Maintenance</span>
+          <h2>Oil - 1,200 km</h2>
+          <p>Next scheduled maintenance</p>
         </div>
       </section>
 
@@ -61,19 +61,19 @@
         <div class="vehicle-status">
           <div class="status-card" onclick="openPopup('temperature')">
             <span>Temperature</span>
-            <h2>86°C</h2>
+            <h2 id="temperature-value">86°C</h2>
             <p>Normal</p>
           </div>
 
           <div class="status-card" onclick="openPopup('speed')">
             <span>Speed</span>
-            <h2>42 km/h</h2>
+            <h2 id="speed-value">42 km/h</h2>
             <p>Current speed</p>
           </div>
 
           <div class="status-card" onclick="openPopup('fuel')">
             <span>Fuel</span>
-            <h2>68%</h2>
+            <h2 id="fuel-value">68%</h2>
             <p>Fuel remaining</p>
           </div>
 
@@ -89,9 +89,7 @@
             <h3>Vehicle Map</h3>
             <span>Live location</span>
           </div>
-
           <div class="map-placeholder">
-            MAP / Vehicle Location
           </div>
         </div>
       </section>
