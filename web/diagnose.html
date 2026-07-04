@@ -26,8 +26,104 @@
         </div>
       </header>
 
-      <section class="empty-page">
-        Diagnose Page
+      <section class="diagnose-summary">
+        <div class="card alert-level">
+          <span>Current Status</span>
+          <h2>Level 2</h2>
+          <p>Attention required</p>
+        </div>
+
+        <div class="card danger">
+          <span>Active Faults</span>
+          <h2>2</h2>
+          <p>Detected diagnostic issues</p>
+        </div>
+
+        <div class="card">
+          <span>Last Scan</span>
+          <h2>2 min</h2>
+          <p>Latest vehicle scan</p>
+        </div>
+
+        <div class="card maintenance">
+          <span>Drive Advice</span>
+          <h2>Inspect Soon</h2>
+          <p>Vehicle can continue driving</p>
+        </div>
+      </section>
+
+      <section class="fault-section">
+        <div class="fault-card warning-fault">
+          <div class="fault-code">P0420</div>
+
+          <div class="fault-content">
+            <div class="fault-header">
+              <div>
+                <h3>Catalyst System Efficiency Below Threshold</h3>
+                <p>Emission System</p>
+              </div>
+              <span class="severity warning-label">Warning</span>
+            </div>
+
+            <p class="fault-desc">
+              The exhaust emission system may not be working efficiently. This can be caused by
+              an oxygen sensor issue, catalytic converter degradation, or exhaust leakage.
+            </p>
+
+            <div class="fault-advice">
+              <strong>Advice:</strong>
+              Vehicle can continue driving, but inspection is recommended soon.
+            </div>
+          </div>
+        </div>
+
+        <div class="fault-card danger-fault">
+          <div class="fault-code">P0524</div>
+
+          <div class="fault-content">
+            <div class="fault-header">
+              <div>
+                <h3>Engine Oil Pressure Too Low</h3>
+                <p>Lubrication System</p>
+              </div>
+              <span class="severity danger-label">Danger</span>
+            </div>
+
+            <p class="fault-desc">
+              The engine oil pressure is below the safe operating range. Low oil pressure can
+              cause severe engine damage if the vehicle keeps running for a long time.
+            </p>
+
+            <div class="fault-advice">
+              <strong>Advice:</strong>
+              Stop safely and check engine oil level immediately. Avoid long-distance driving.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="maintenance-watch">
+        <h3>Maintenance Watch</h3>
+
+        <div class="maintenance-grid">
+          <div class="maintenance-item">
+            <span>Brake Pad Wear</span>
+            <strong>Medium</strong>
+            <p>Inspection recommended</p>
+          </div>
+
+          <div class="maintenance-item">
+            <span>Oil Condition</span>
+            <strong>Good (92%)</strong>
+            <p>Normal lubrication status</p>
+          </div>
+
+          <div class="maintenance-item">
+            <span>Battery Voltage</span>
+            <strong>Normal</strong>
+            <p>Electrical system stable</p>
+          </div>
+        </div>
       </section>
     </main>
   </div>

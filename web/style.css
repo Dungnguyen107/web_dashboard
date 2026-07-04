@@ -363,3 +363,135 @@ body {
 .popup-body ul {
   margin-left: 20px;
 }
+
+.diagnose-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.9vw;
+  margin-bottom: 1.4vh;
+}
+
+.fault-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1vw;
+  margin-bottom: 1.4vh;
+}
+
+.fault-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 1vw;
+  padding: 1.4vh 1.2vw;
+  display: flex;
+  gap: 1vw;
+}
+
+.warning-fault {
+  border-left: 5px solid #f59e0b;
+}
+
+.danger-fault {
+  border-left: 5px solid #dc2626;
+}
+
+.fault-code {
+  min-width: 90px;
+  height: 90px;
+  border-radius: 1vw;
+  background: #f8fafc;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(18px, 1.4vw, 26px);
+  font-weight: 700;
+}
+
+.fault-content {
+  flex: 1;
+}
+
+.fault-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1vw;
+  margin-bottom: 1vh;
+}
+
+.fault-header h3 {
+  font-size: clamp(15px, 1.1vw, 21px);
+}
+
+.fault-header p,
+.fault-desc,
+.fault-advice {
+  color: #6b7280;
+  font-size: clamp(12px, 0.85vw, 15px);
+}
+
+.severity {
+  height: fit-content;
+  padding: 0.4vh 0.8vw;
+  border-radius: 999px;
+  font-size: clamp(11px, 0.75vw, 14px);
+  font-weight: 600;
+}
+
+.warning-label {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.danger-label {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.fault-advice {
+  margin-top: 1vh;
+  padding: 0.8vh 0.8vw;
+  background: #f8fafc;
+  border-radius: 0.7vw;
+}
+
+.maintenance-watch {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 1vw;
+  padding: 1.2vh 1vw;
+}
+
+.maintenance-watch h3 {
+  font-size: clamp(16px, 1.1vw, 22px);
+  margin-bottom: 1vh;
+}
+
+.maintenance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8vw;
+}
+
+.maintenance-item {
+  background: #f8fafc;
+  border-radius: 0.8vw;
+  padding: 1vh 0.9vw;
+}
+
+.maintenance-item span {
+  display: block;
+  color: #6b7280;
+  font-size: clamp(11px, 0.75vw, 14px);
+}
+
+.maintenance-item strong {
+  display: block;
+  margin: 0.4vh 0;
+  font-size: clamp(15px, 1vw, 19px);
+}
+
+.maintenance-item p {
+  color: #9ca3af;
+  font-size: clamp(11px, 0.75vw, 14px);
+}
