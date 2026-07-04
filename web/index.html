@@ -13,7 +13,7 @@
 
       <nav class="menu">
         <a class="active" href="index.html">Overview</a>
-        <a href="vehicle.html">Vehicle Control</a>
+        <a href="diagnose.html">Diagnose</a>
         <a href="ota.html">OTA Update</a>
       </nav>
     </aside>
@@ -21,12 +21,11 @@
     <main class="main">
       <header class="topbar">
         <div>
-          <h1>Fleet Overview</h1>
-          <p>Quản lý tổng quan hệ thống xe AutoMate</p>
+          <h1>Overview</h1>
+          <p>AutoMate vehicle monitoring dashboard</p>
         </div>
 
         <div class="top-actions">
-          <input type="text" placeholder="Search vehicle..." />
           <div class="avatar">AV</div>
         </div>
       </header>
@@ -35,51 +34,51 @@
         <div class="card">
           <span>Total Vehicles</span>
           <h2>24</h2>
-          <p>Tổng số xe trong hệ thống</p>
+          <p>Total vehicles in the system</p>
         </div>
 
         <div class="card">
           <span>Online</span>
           <h2>21</h2>
-          <p>Xe đang kết nối</p>
+          <p>Connected vehicles</p>
         </div>
 
         <div class="card warning">
           <span>Warning</span>
           <h2>3</h2>
-          <p>Xe có cảnh báo cần chú ý</p>
+          <p>Vehicles requiring attention</p>
         </div>
 
         <div class="card danger">
           <span>Danger</span>
           <h2>1</h2>
-          <p>Xe ở mức nguy hiểm</p>
+          <p>Vehicles in critical condition</p>
         </div>
       </section>
 
       <section class="content-grid">
         <div class="vehicle-status">
           <div class="status-card" onclick="openPopup('temperature')">
-            <span>Nhiệt độ</span>
+            <span>Temperature</span>
             <h2>86°C</h2>
             <p>Normal</p>
           </div>
 
           <div class="status-card" onclick="openPopup('speed')">
-            <span>Tốc độ</span>
+            <span>Speed</span>
             <h2>42 km/h</h2>
             <p>Current speed</p>
           </div>
 
           <div class="status-card" onclick="openPopup('fuel')">
-            <span>Mức xăng/pin</span>
+            <span>Fuel Level</span>
             <h2>68%</h2>
-            <p>Fuel / Battery</p>
+            <p>Fuel Remaining</p>
           </div>
 
           <div class="status-card" onclick="openPopup('oil')">
-            <span>Tình trạng nhớt</span>
-            <h2>Good</h2>
+            <span>Oil Condition</span>
+            <h2>Good (92%)</h2>
             <p>Oil condition</p>
           </div>
         </div>
@@ -91,56 +90,11 @@
           </div>
 
           <div class="map-placeholder">
-            MAP / Vị trí các xe trong hệ thống
+            MAP / Vehicle Location
           </div>
         </div>
-
-        <details class="vehicle-list">
-          <summary>Vehicle List</summary>
-
-          <div class="vehicle-item active-car">
-            <strong>VEH-001</strong>
-            <span>51H-123.45</span>
-            <p>Normal · Last update 2 min ago</p>
-          </div>
-
-          <div class="vehicle-item">
-            <strong>VEH-002</strong>
-            <span>51K-888.12</span>
-            <p>Warning · Engine temperature</p>
-          </div>
-
-          <div class="vehicle-item">
-            <strong>VEH-003</strong>
-            <span>30F-456.78</span>
-            <p>Offline · Last update 1 hour ago</p>
-          </div>
-        </details>
       </section>
 
-      <section class="selected-vehicle">
-
-          <div class="selected-summary">
-
-              <div class="selected-title">
-                  <span>Selected Vehicle</span>
-              </div>
-
-              <div class="selected-item">
-                  <strong>Toyota Fortuner</strong>
-              </div>
-
-              <div class="selected-item">
-                  <strong>51H-123.45</strong>
-              </div>
-
-              <div class="selected-item">
-                  <strong class="level-normal">🟢 Level 1</strong>
-              </div>
-
-          </div>
-
-      </section>
     </main>
     </div>
     <div class="popup-overlay" id="popup">
