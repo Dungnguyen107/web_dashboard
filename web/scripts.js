@@ -4,6 +4,51 @@ const popupTitle = document.getElementById("popup-title");
 
 const popupBody = document.getElementById("popup-body");
 
+const temperatureValue = document.getElementById("temperature-value");
+const speedValue = document.getElementById("speed-value");
+const fuelValue = document.getElementById("fuel-value");
+
+let temperature = 86;
+let temperatureDirection = 1;
+
+let speed = 42;
+let speedDirection = 1;
+
+let fuel = 66;
+
+// Temperature: 86 -> 88 -> 86
+setInterval(function () {
+  temperature += temperatureDirection;
+
+  if (temperature >= 88 || temperature <= 86) {
+    temperatureDirection *= -1;
+  }
+
+  temperatureValue.textContent = temperature + "°C";
+}, 10000);
+
+// Speed: 42 -> 68 -> 20 -> 68 ...
+setInterval(function () {
+  speed += speedDirection;
+
+  if (speed >= 50 || speed <= 42) {
+    speedDirection *= -1;
+  }
+
+  speedValue.textContent = speed + " km/h";
+}, 1800);
+
+// Fuel: 66 -> 58, then reset to 66
+setInterval(function () {
+  fuel -= 1;
+
+  if (fuel < 58) {
+    fuel = 66;
+  }
+
+  fuelValue.textContent = fuel + "%";
+}, 13500);
+
 function openPopup(type){
 
     popup.classList.add("show");
@@ -23,8 +68,8 @@ function openPopup(type){
                 <h3>Explanation</h3>
 
                 <p>
-                Nhiệt độ động cơ hiện đang nằm trong vùng an toàn.
-                Hệ thống sẽ cảnh báo nếu vượt quá ngưỡng cấu hình.
+                    The engine temperature is currently within the safe range.
+                    The system will trigger an alert if it exceeds the configured threshold.
                 </p>
 
                 <h3>History</h3>
@@ -99,13 +144,13 @@ function openPopup(type){
 
                 <h3>Status</h3>
 
-                <p>Good</p>
+                <p>92% - Good</p>
 
                 <h3>Explanation</h3>
 
                 <p>
 
-                Chất lượng dầu bôi trơn vẫn nằm trong giới hạn cho phép.
+                The oil condition is still within the acceptable range.
 
                 </p>
 
@@ -116,6 +161,24 @@ function openPopup(type){
     }
 
 }
+
+function openVehicleDetails() {
+  const popup = document.getElementById("vehiclePopup");
+  popup.classList.add("active");
+}
+
+function closeVehicleDetails() {
+  const popup = document.getElementById("vehiclePopup");
+  popup.classList.remove("active");
+}
+
+document.addEventListener("click", function (event) {
+  const popup = document.getElementById("vehiclePopup");
+
+  if (event.target === popup) {
+    closeVehicleDetails();
+  }
+});
 
 function closePopup(){
 
