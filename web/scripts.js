@@ -25,7 +25,7 @@ setInterval(function () {
   }
 
   temperatureValue.textContent = temperature + "°C";
-}, 10000);
+}, 1200);
 
 // Speed: 42 -> 68 -> 20 -> 68 ...
 setInterval(function () {
@@ -36,7 +36,7 @@ setInterval(function () {
   }
 
   speedValue.textContent = speed + " km/h";
-}, 1800);
+}, 500);
 
 // Fuel: 66 -> 58, then reset to 66
 setInterval(function () {
@@ -47,7 +47,7 @@ setInterval(function () {
   }
 
   fuelValue.textContent = fuel + "%";
-}, 13500);
+}, 2500);
 
 function openPopup(type){
 
