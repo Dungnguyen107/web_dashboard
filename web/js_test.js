@@ -74,7 +74,7 @@ function updateGauge(options) {
     /*
      * Gauge chạy từ -90 độ đến +90 độ.
      */
-    const angle = -90 + percentage * 180;
+    const angle = -135 + percentage * 270;
 
     progressElement.style.strokeDashoffset =
         String(dashOffset);
