@@ -1,151 +1,313 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AutoMate Dashboard - Overview</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AutoMate Dashboard - Overview Test</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="dashboard">
-    <aside class="sidebar">
-      <div class="logo">AutoMate</div>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">AutoMate</div>
 
-      <nav class="menu">
-        <a class="active" href="index.html">Overview</a>
-        <a href="diagnose.html">Diagnose</a>
-        <a href="systems.html">Systems</a>
-      </nav>
-    </aside>
+            <nav class="menu">
+                <a class="active" href="index_test.html">Overview</a>
+                <a href="diagnose.html">Diagnose</a>
+                <a href="systems.html">Systems</a>
+            </nav>
+        </aside>
 
-    <main class="main">
-      <header class="topbar">
-        <div>
-          <h1>Overview</h1>
-          <p>AutoMate vehicle monitoring dashboard</p>
-        </div>
+        <!-- Main overview -->
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <h1>Overview</h1>
+                    <p>AutoMate vehicle monitoring dashboard</p>
+                </div>
 
-        <div class="top-actions">
-          <div class="avatar">AV</div>
-        </div>
-      </header>
+                <div class="top-actions">
+                    <div class="avatar">AV</div>
+                </div>
+            </header>
+            <div class="overview-layout">
+                <!-- Left column -->
+                <section class="overview-left">
+                    <!-- Gauges -->
+                    <div class="gauges-row">
+                        <!-- Speed gauge -->
+                        <button
+                            class="gauge-card"
+                            type="button"
+                            data-popup="speed"
+                            aria-label="Xem chi tiết tốc độ"
+                        >
+                            <div class="gauge">
+                                <svg
+                                    class="gauge-svg"
+                                    viewBox="0 0 220 135"
+                                    role="img"
+                                    aria-label="Đồng hồ tốc độ"
+                                >
+                                    <path
+                                        class="gauge-track"
+                                        d="M 30 110 A 80 80 0 0 1 190 110"
+                                    />
 
-      <section class="stats">
-        <div class="card health">
-          <span>Vehicle Health</span>
-          <h2>good</h2>
-          <p>Overall system condition</p>
-        </div>
+                                    <path
+                                        id="speed-progress"
+                                        class="gauge-progress"
+                                        d="M 30 110 A 80 80 0 0 1 190 110"
+                                    />
 
-        <div class="card alert-level">
-          <span>Alert Level</span>
-          <h2>Level 1</h2>
-          <p>Normal — no active critical faults</p>
-        </div>
+                                    <line
+                                        id="speed-needle"
+                                        class="gauge-needle"
+                                        x1="110"
+                                        y1="110"
+                                        x2="110"
+                                        y2="51"
+                                    />
 
-        <div class="card drive-advice">
-          <span>Drive Advice</span>
-          <h2>Safe to Drive</h2>
-          <p>Continuous monitoring vehicle status</p>
-        </div>
+                                    <circle
+                                        class="gauge-center"
+                                        cx="110"
+                                        cy="110"
+                                        r="7"
+                                    />
+                                </svg>
+                            </div>
 
-        <div class="card maintenance">
-          <span>Maintenance</span>
-          <h2>Oil - 1,200 km</h2>
-          <p>Next scheduled maintenance</p>
-        </div>
-      </section>
+                            <div class="gauge-reading">
+                                <strong id="speed-value">51 km/h</strong>
+                                <span>Current speed</span>
+                            </div>
+                        </button>
 
-      <section class="content-grid">
-        <div class="vehicle-status">
-          <div class="status-card" onclick="openPopup('temperature')">
-            <span>Temperature</span>
-            <h2 id="temperature-value">86°C</h2>
-            <p>Normal</p>
-          </div>
+                        <!-- Fuel gauge -->
+                        <button
+                            class="gauge-card"
+                            type="button"
+                            data-popup="fuel"
+                            aria-label="Xem chi tiết nhiên liệu"
+                        >
+                            <div class="gauge">
+                                <svg
+                                    class="gauge-svg"
+                                    viewBox="0 0 220 135"
+                                    role="img"
+                                    aria-label="Đồng hồ nhiên liệu"
+                                >
+                                    <path
+                                        class="gauge-track"
+                                        d="M 30 110 A 80 80 0 0 1 190 110"
+                                    />
 
-          <div class="status-card" onclick="openPopup('speed')">
-            <span>Speed</span>
-            <h2 id="speed-value">42 km/h</h2>
-            <p>Current speed</p>
-          </div>
+                                    <path
+                                        id="fuel-progress"
+                                        class="gauge-progress"
+                                        d="M 30 110 A 80 80 0 0 1 190 110"
+                                    />
 
-          <div class="status-card" onclick="openPopup('fuel')">
-            <span>Fuel</span>
-            <h2 id="fuel-value">68%</h2>
-            <p>Fuel remaining</p>
-          </div>
+                                    <line
+                                        id="fuel-needle"
+                                        class="gauge-needle"
+                                        x1="110"
+                                        y1="110"
+                                        x2="110"
+                                        y2="51"
+                                    />
 
-          <div class="status-card" onclick="openPopup('oil')">
-            <span>Oil Condition</span>
-            <h2>Good (92%)</h2>
-            <p>Oil condition</p>
-          </div>
-        </div>
+                                    <circle
+                                        class="gauge-center"
+                                        cx="110"
+                                        cy="110"
+                                        r="7"
+                                    />
+                                </svg>
+                            </div>
 
-        <div class="map-panel">
-          <div class="panel-header">
-            <h3>Vehicle Map</h3>
-            <span>Live location</span>
-          </div>
-          <div class="map-placeholder">
-          </div>
-        </div>
-      </section>
+                            <div class="gauge-reading">
+                                <strong id="fuel-value">68%</strong>
+                                <span>Fuel remaining</span>
+                            </div>
+                        </button>
+                    </div>
 
-      <section class="vehicle-info-card">
-        <div class="vehicle-info-header">
-          <div>
-            <h3>Vehicle Information</h3>
-          </div>
+                    <!-- Oil and temperature -->
+                    <div class="quick-status-row">
+                        <button
+                            class="quick-status"
+                            type="button"
+                            data-popup="oil"
+                        >
+                            <span>Oil status</span>
+                            <strong id="oil-value" class="status-good">Good</strong>
+                        </button>
 
-          <button class="details-btn" onclick="openPopup('vehicle')">
-            Details
-          </button>
-        </div>
+                        <button
+                            class="quick-status"
+                            type="button"
+                            data-popup="temperature"
+                        >
+                            <span>Temperature</span>
+                            <strong id="temperature-value" class="status-temperature">65°C</strong>
+                        </button>
+                    </div>
 
-        <div class="vehicle-info-grid">
-          <div class="vehicle-info-item">
-            <span>Brand</span>
-            <strong>Toyota</strong>
-          </div>
+                    <!-- Fault level -->
+                    <section class="info-panel fault-level-panel">
+                        <div class="fault-level-header">
+                            <span class="panel-label">Fault level</span>
 
-          <div class="vehicle-info-item">
-            <span>Model</span>
-            <strong>Corolla Cross</strong>
-          </div>
+                            <span class="fault-badge warning">
+                                Warning
+                            </span>
+                        </div>
 
-          <div class="vehicle-info-item">
-            <span>License Plate</span>
-            <strong>51H-123.45</strong>
-          </div>
+                        <div class="fault-level-content">
+                            <span
+                                id="fault-indicator"
+                                class="status-dot warning"
+                                aria-hidden="true"
+                            ></span>
 
-          <div class="vehicle-info-item">
-            <span>VIN</span>
-            <strong>RL4XW43G869205813</strong>
-          </div>
+                            <div>
+                                <strong id="fault-level">
+                                    Level 3
+                                </strong>
 
-          <div class="vehicle-info-item">
-            <span>Inspection</span>
-            <strong class="status-valid">Valid</strong>
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
+                                <p class="fault-level-summary">
+                                    Inspection recommended
+                                </p>
+                            </div>
+                        </div>
+                    </section>
 
-  <div class="popup-overlay" id="popup">
-    <div class="popup-window">
-      <div class="popup-header">
-        <h2 id="popup-title">Title</h2>
-        <button onclick="closePopup()">✕</button>
-      </div>
+                    <section class="info-panel fault-description-panel">
+                        <span class="panel-label">
+                            Fault description
+                        </span>
 
-      <div class="popup-body" id="popup-body"></div>
+                        <p id="fault-description" class="fault-message">
+                            Engine coolant temperature is above the normal range.
+                            Prolonged operation may lead to engine overheating and potential engine damage.
+                        </p>
+
+                        <div class="fault-action">
+                            <span>Recommended action</span>
+
+                            <p>
+                                Reduce speed and inspect the cooling system soon.
+                            </p>
+                        </div>
+                    </section>
+                </section>
+
+                <!-- Right column -->
+                <section class="overview-right">
+                    <!-- Vehicle information -->
+                    <section class="vehicle-card">
+                        <div class="vehicle-card-header">
+                            <div>
+                                <span class="section-label">
+                                    Current vehicle
+                                </span>
+
+                                <h1>Toyota Corolla Cross</h1>
+                            </div>
+
+                            <span class="vehicle-status">
+                                Active
+                            </span>
+                        </div>
+
+                        <div class="vehicle-details">
+                            <div class="vehicle-detail">
+                                <span>Brand</span>
+                                <strong>Toyota</strong>
+                            </div>
+
+                            <div class="vehicle-detail">
+                                <span>License plate</span>
+                                <strong>51H-123.45</strong>
+                            </div>
+
+                            <div class="vehicle-detail">
+                                <span>VIN</span>
+                                <strong>RL4XW43G869205813</strong>
+                            </div>
+
+                            <div class="vehicle-detail">
+                                <span>Insurance</span>
+                                <strong class="valid-text">Valid</strong>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Map -->
+                    <section class="map-card">
+                        <div class="map-header">
+                            <div>
+
+                                <h2>Vehicle Location</h2>
+                            </div>
+
+                            <span class="live-status">
+                                <span class="live-dot"></span>
+                                Live
+                            </span>
+                        </div>
+
+                        <div
+                            class="map-placeholder"
+                            role="img"
+                            aria-label="Bản đồ vị trí xe"
+                        >
+                            <span class="map-message">
+                                🔍
+                            </span>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </main>
     </div>
-  </div>
 
-  <script src="scripts.js"></script>
+    <!-- Popup -->
+    <div
+        id="popup"
+        class="popup-overlay"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="popup-title"
+        aria-hidden="true"
+    >
+        <div class="popup-window">
+            <div class="popup-header">
+                <h2 id="popup-title">Details</h2>
+
+                <button
+                    id="close-popup"
+                    class="popup-close"
+                    type="button"
+                    aria-label="Đóng"
+                >
+                    &times;
+                </button>
+            </div>
+
+            <div id="popup-body" class="popup-body"></div>
+        </div>
+    </div>
+
+    <script src="js_test.js"></script>
 </body>
 </html>

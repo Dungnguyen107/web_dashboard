@@ -36,7 +36,7 @@ const elements = {
    Gauge setup
 ========================= */
 
-const GAUGE_ARC_LENGTH = Math.PI * 80;
+const GAUGE_ARC_LENGTH = 251.33;
 
 function setupGauge(pathElement) {
     if (!pathElement) {
